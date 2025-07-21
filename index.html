@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/c65f2f1cc8.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+        <picture>
+                <img src="/assets/images/free_drinks.jpg" alt="">
+        </picture>
+      <nav class="header__nav--topNav" id="menuTopNav">
+        <a href="./index.html#home" class="active">Home</a>
+        <a href="./drinks.html">Bebidas</a>
+        <a href="#about">Quienes somos</a>
+        <a href="#contact">Contacto</a>
+        <a href="javascript:void(0);" class="icon" onclick="openMenuTopNav()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </nav>
+    </header>
+    <main>
+      <section class="section__video">
+        <video autoplay muted loop id="backgroundVideo">
+          <source src="assets/videos/bar.mp4" type="video/mp4" />
+        </video>
+      </section>
+    </main>
+    <script src="js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+.section__video #backgroundVideo {
+  position: fixed;
+  right: 0;
+  top: 60px;
+  min-width: 100%;
+  min-height: 100%;
+}
