@@ -13,7 +13,7 @@
   <body>
     <header class="header">
       <picture>
-        <img src="/assets/images/free_drinks.jpg" alt="" />
+        <img src="/assets/images/drink_free4.png" alt="logotipo_drinks_free" />
       </picture>
       <nav class="header__nav--topNav" id="menuTopNav">
         <a href="./index.html#home">Home</a>
@@ -25,36 +25,67 @@
         </a>
       </nav>
     </header>
-  <aside class="sidebar__menu">
-    <a href="#" onclick="getDrinksByCategory('Cocktail')">
-        <i class="fa-solid fa-martini-glass fa-xl"></i> <span class="category-name">Cóctel</span>
-    </a>
-    <a href="#" onclick="getDrinksByCategory('Ordinary_Drink')">
-        <i class="fa-solid fa-glass-water fa-xl"></i> <span class="category-name">Bebida Común</span>
-    </a>
-    <a href="#" onclick="getDrinksByCategory('Punch / Party Drink')">
-        <i class="fa-solid fa-martini-glass-citrus fa-xl"></i> <span class="category-name">Ponche / Bebida de Fiesta</span>
-    </a>
-    <a href="#" onclick="getDrinksByCategory('Shake')">
-        <i class="fa-solid fa-glass-water-droplet fa-xl"></i> <span class="category-name">Batido</span>
-    </a>
-    <a href="#" onclick="getDrinksByCategory('Shot')">
-        <i class="fa-solid fa-whiskey-glass fa-xl"></i> <span class="category-name">Shot</span>
-    </a>
-    <a href="#" onclick="getDrinksByCategory('Coffee / Tea')">
-        <i class="fa-solid fa-mug-hot fa-xl"></i> <span class="category-name">Café / Té</span>
-    </a>
-    <a href="#" onclick="getDrinksByCategory('Homemade Liqueur')">
-        <i class="fa-solid fa-blender fa-xl"></i> <span class="category-name">Licor Casero</span>
-    </a>
-    <a href="#" onclick="getDrinksByCategory('Beer')">
-        <i class="fa-solid fa-beer-mug-empty fa-xl"></i> <span class="category-name">Cerveza</span>
-    </a>
-    <a href="#" onclick="getDrinksByCategory('Soft Drink')">
-        <i class="fa-solid fa-mug-saucer fa-xl"></i> <span class="category-name">Refresco</span>
-    </a>
-</aside>
+    <aside class="sidebar__menu">
+      <a
+        href="#"
+        onclick="getDrinksByCategory('Cocktail', this)"
+        class="active"
+      >
+        <i class="fa-solid fa-martini-glass fa-xl"></i>
+        <span class="category-name">Cóctel</span>
+      </a>
+      <a href="#" onclick="getDrinksByCategory('Ordinary_Drink', this)">
+        <i class="fa-solid fa-glass-water fa-xl"></i>
+        <span class="category-name">Bebida Común</span>
+      </a>
+      <a href="#" onclick="getDrinksByCategory('Punch / Party Drink', this)">
+        <i class="fa-solid fa-martini-glass-citrus fa-xl"></i>
+        <span class="category-name">Ponche / Bebida de Fiesta</span>
+      </a>
+      <a href="#" onclick="getDrinksByCategory('Shake', this)">
+        <i class="fa-solid fa-glass-water-droplet fa-xl"></i>
+        <span class="category-name">Batido</span>
+      </a>
+      <a href="#" onclick="getDrinksByCategory('Shot', this)">
+        <i class="fa-solid fa-whiskey-glass fa-xl"></i>
+        <span class="category-name">Shot</span>
+      </a>
+      <a href="#" onclick="getDrinksByCategory('Coffee / Tea', this)">
+        <i class="fa-solid fa-mug-hot fa-xl"></i>
+        <span class="category-name">Café / Té</span>
+      </a>
+      <a href="#" onclick="getDrinksByCategory('Homemade Liqueur', this)">
+        <i class="fa-solid fa-blender fa-xl"></i>
+        <span class="category-name">Licor Casero</span>
+      </a>
+      <a href="#" onclick="getDrinksByCategory('Beer', this)">
+        <i class="fa-solid fa-beer-mug-empty fa-xl"></i>
+        <span class="category-name">Cerveza</span>
+      </a>
+      <a href="#" onclick="getDrinksByCategory('Soft Drink', this)">
+        <i class="fa-solid fa-mug-saucer fa-xl"></i>
+        <span class="category-name">Refresco</span>
+      </a>
+    </aside>
     <main>
+      <section class="section__video">
+        <video autoplay muted loop id="backgroundVideo">
+          <source
+            src="assets/videos/mixkit-pouring-ice-and-lemonade-into-a-glass-on-black-background-9418-hd-ready.mp4"
+            type="video/mp4"
+          />
+        </video>
+         <div class="content">
+          <h1 class="title">Nuestras Bebidas</h1>
+          <hr>
+          <p>
+            Si algo deja huella en <strong>Drinks Free</strong> es su impresionante variedad de cócteles y bebidas. La carta está pensada para sorprender tanto a amantes de los clásicos como a quienes buscan algo diferente en cada visita.
+          </p>
+          <p>
+            La variedad de bebidas en <strong>Drinks Free</strong> no es solo extensa, es inteligente, creativa y bien ejecutada. Ideal para descubrir nuevos sabores cada noche y volver por más. Un lugar donde cada cóctel cuenta su propia historia.
+          </p>
+        </div>
+      </section>
       <section class="section__drinks" id="sectionDrinks"></section>
     </main>
     <script src="js/index.js"></script>

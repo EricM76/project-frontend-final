@@ -7,7 +7,7 @@
   left: 0;
   background-color: black;
   overflow: visible; 
-  padding-top: 16px;
+  padding-top: 3px;
   
 }
 
@@ -20,7 +20,11 @@
   align-items: center;
   position: relative; 
   white-space: nowrap;
-  
+}
+
+.sidebar__menu a.active {
+    background-color: var(--color-primary-violet);
+    color: white;
 }
 
 .sidebar__menu a i {
@@ -33,7 +37,7 @@
   left: 100%; 
   top: 50%; 
   transform: translateY(-50%); 
-  background-color: #333; 
+  background-color: var(--color-secondary); 
   padding: 8px 12px;
   border-radius: 4px;
   opacity: 0; 
@@ -75,8 +79,8 @@
 
 
 .sidebar__menu a:hover {
-  color: #f1f1f1;
-  background-color: #333; 
+  color: black;
+  background-color: var(--color-selected); 
 }
 
 

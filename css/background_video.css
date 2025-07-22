@@ -5,3 +5,55 @@
   min-width: 100%;
   min-height: 100%;
 }
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  
+  margin: 0 80px;
+  padding: 20px;
+  line-height: 30px;
+}
+
+
+h1.title {
+  margin: 30px 0;
+  font-size: 2.5rem;
+}
+
+/* Media queries para pantallas de hasta 768px (típicamente tablets y móviles) */
+@media (max-width: 768px) {
+  .section__video #backgroundVideo {
+    /* Aquí podrías ajustar el video si fuera necesario, pero para centrar el contenido, no es estrictamente necesario modificar el video en sí, ya que su min-width: 100% lo mantendrá cubriendo la pantalla. */
+    /* Si quisieras centrar el video y que no cubra el 100%, tendrías que ajustar min-width y min-height y usar 'left: 50%; transform: translateX(-50%);' */
+     left: 50%; /* Mueve el bloque de contenido a la mitad de la pantalla */
+    transform: translateX(-50%); /* Ajusta el bloque de contenido para centrarlo horizontalmente */
+  }
+
+  .content {
+    left: 50%; /* Mueve el bloque de contenido a la mitad de la pantalla */
+    transform: translateX(-50%); /* Ajusta el bloque de contenido para centrarlo horizontalmente */
+    width: 90%; /* Ajusta el ancho para que no ocupe el 100% y tenga un poco de margen */
+    max-width: 600px; /* Limita el ancho máximo para tabletas */
+    margin: 0 ;
+  }
+
+  h1.title {
+    font-size: 2rem; /* Reduce el tamaño del título para mejor visualización en móviles */
+  }
+}
+
+/* Media query adicional para pantallas más pequeñas (solo móviles) */
+@media (max-width: 480px) {
+  .content {
+    padding: 15px; /* Reduce el padding en pantallas muy pequeñas */
+    line-height: 25px;
+      
+  }
+
+  h1.title {
+    font-size: 1.8rem;
+  }
+}
