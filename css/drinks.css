@@ -46,7 +46,7 @@
 
 .flip-card-front img {
   object-fit: contain;
-    width: 300px;
+    width: 100%;
 
 }
 
@@ -68,4 +68,18 @@
 .flip-card-back h2 {
   font-family: Caveat;
   font-size: 2rem;
+}
+
+.flip-card-back__actions {
+  display: flex;
+  gap: 10px;
+}
+
+@media screen and (max-width: 426px) {
+
+.flip-card-back__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 }
