@@ -39,6 +39,10 @@ async function getDrinkData(drinkId) {
         }
         
     })
+
+    const btnOrderBuy = document.getElementById("btn-order-buy")
+    btnOrderBuy.setAttribute("onclick", `orderAdd({id : '${drink.idDrink}', name :'${drink.strDrink}', image: '${drink.strDrinkThumb}'})`)
+    
   } catch (error) {
     console.error(error);
   }

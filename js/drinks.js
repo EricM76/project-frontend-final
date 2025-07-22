@@ -2,8 +2,11 @@ const API_URL = "https://www.thecocktaildb.com/api/json/v1/1";
 const sectionDrinks = document.getElementById("sectionDrinks");
 
 async function getDrinksByCategory(categoryName, clickedElement) {
-     const sectionDrinks = document.getElementById("sectionDrinks");
-    sectionDrinks.style.display = 'flex'
+  const sectionDrinks = document.getElementById("sectionDrinks");
+  const content = document.querySelector('.content');
+  if(content) content.innerHTML = null
+  
+  sectionDrinks.style.display = "flex";
   const allLinks = document.querySelectorAll(".sidebar__menu a");
   allLinks.forEach((link) => {
     link.classList.remove("active");
@@ -28,23 +31,12 @@ async function getDrinksByCategory(categoryName, clickedElement) {
                     <h2>${drink.strDrink}</h2>
                     <div class="flip-card-back__actions">
                       <a href="drink.html?drinkId=${drink.idDrink}" class="btn-outline btn-default"><i class="fas fa-plus"></i> Información</a>
-                      <button class="btn-outline btn-success"><i class="fas fa-shopping-cart"></i> Pedir</button>
+                      <button class="btn-outline btn-success" onclick="orderAdd({id : '${drink.idDrink}', name :'${drink.strDrink}', image: '${drink.strDrinkThumb}'})"><i class="fas fa-shopping-cart"></i> Pedir</button>
                     </div>
                     </div>
                 </div>
             </div>
             `;
-      });
-
-      const flipCards = document.querySelectorAll(".flip-card");
-
-      flipCards.forEach((card) => {
-        const drinkId = card.querySelector(".flip-card-back").dataset.drinkId;
-
-        const flipCardBack = card.querySelector(".flip-card-back");
-        flipCardBack.addEventListener("mouseenter", () => {
-          getDataDrinkById(drinkId);
-        });
       });
     }
   } catch (error) {

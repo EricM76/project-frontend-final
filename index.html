@@ -14,7 +14,10 @@
     <header class="header">
       <picture>
         <a href="/index.html">
-        <img src="/assets/images/drink_free4.png" alt="logotipo_drinks_free" />
+          <img
+            src="/assets/images/drink_free4.png"
+            alt="logotipo_drinks_free"
+          />
         </a>
       </picture>
       <nav class="header__nav--topNav" id="menuTopNav">
@@ -22,6 +25,7 @@
         <a href="./drinks.html">Bebidas</a>
         <a href="/about.html">Quienes somos</a>
         <a href="/contact.html">Contacto</a>
+        <a href="#" id="openModalLink">Tu pedido</a>
         <a href="javascript:void(0);" class="icon" onclick="openMenuTopNav()">
           <i class="fa fa-bars"></i>
         </a>
@@ -37,18 +41,24 @@
         </video>
         <div class="content">
           <h1 class="title">Drinks Free</h1>
-          <hr>
+          <hr />
           <p>
             <strong>Drinks Free</strong> es una experiencia visual cautivadora.
             La página logra transportar al visitante directamente al ambiente
             vibrante del bar.
           </p>
           <p>
-           El sitio web de <strong>Drinks Free</strong> no solo refleja la esencia del bar, sino que también invita a vivir la experiencia antes de cruzar la puerta. Un sitio bien logrado, atractivo y funcional, ideal para quienes buscan cócteles únicos en un ambiente con alma retro.
+            El sitio web de <strong>Drinks Free</strong> no solo refleja la
+            esencia del bar, sino que también invita a vivir la experiencia
+            antes de cruzar la puerta. Un sitio bien logrado, atractivo y
+            funcional, ideal para quienes buscan cócteles únicos en un ambiente
+            con alma retro.
           </p>
         </div>
       </section>
+      <section id="orderModalContainer" class="order"></section>
     </main>
     <script src="js/index.js"></script>
+    <script src="js/order.js"></script>
   </body>
 </html>

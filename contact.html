@@ -13,14 +13,19 @@
   <body>
     <header class="header">
       <picture>
-  <a href="/index.html">
-        <img src="/assets/images/drink_free4.png" alt="logotipo_drinks_free" />
-        </a>      </picture>
+        <a href="/index.html">
+          <img
+            src="/assets/images/drink_free4.png"
+            alt="logotipo_drinks_free"
+          />
+        </a>
+      </picture>
       <nav class="header__nav--topNav" id="menuTopNav">
         <a href="./index.html#home">Home</a>
         <a href="./drinks.html">Bebidas</a>
         <a href="/about.html">Quienes somos</a>
         <a href="/contact.html" class="active">Contacto</a>
+        <a href="#" id="openModalLink">Tu pedido</a>
         <a href="javascript:void(0);" class="icon" onclick="openMenuTopNav()">
           <i class="fa fa-bars"></i>
         </a>
@@ -30,7 +35,7 @@
       <section class="section__video">
         <video autoplay muted loop id="backgroundVideo">
           <source
-            src="assets/videos/mixkit-experimental-cocktail-in-the-bar-4416-hd-ready.mp4"
+            src="assets/videos/mixkit-gin-with-ice-and-lime-close-up-26247-hd-ready.mp4"
             type="video/mp4"
           />
         </video>
@@ -38,12 +43,17 @@
           <h1 class="title">Contactanos</h1>
           <hr />
           <div class="container">
-            <form action="">
+            <form
+              action="https://formspree.io/f/xqalpaez"
+              method="POST"
+              id="contactForm"
+              autocomplete="off"
+            >
               <label for="fname">Nombre</label>
               <input
                 type="text"
                 id="name"
-                name="email"
+                name="name"
                 placeholder="Tu nombre es..."
               />
 
@@ -57,18 +67,24 @@
 
               <label for="subject">Mensaje</label>
               <textarea
-                id="subject"
-                name="subject"
+                id="message"
+                name="message"
                 placeholder="¿Qué quieres contarnos?"
                 rows="5"
               ></textarea>
 
-              <input type="submit" class="btn-outline btn-default" value="Enviar" />
+              <input
+                type="submit"
+                class="btn-outline btn-default"
+                value="Enviar"
+              />
             </form>
           </div>
         </div>
       </section>
+      <section id="orderModalContainer" class="order"></section>
     </main>
-    <script src="js/index.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/order.js"></script>
   </body>
 </html>

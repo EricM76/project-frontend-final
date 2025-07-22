@@ -1,26 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Bebidas | Drinks Free</title>
     <link rel="stylesheet" href="css/style.css" />
     <script
       src="https://kit.fontawesome.com/c65f2f1cc8.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
     <header class="header">
       <picture>
-  <a href="/index.html">
-        <img src="/assets/images/drink_free4.png" alt="logotipo_drinks_free" />
-        </a>      </picture>
+        <a href="/index.html">
+          <img
+            src="/assets/images/drink_free4.png"
+            alt="logotipo_drinks_free"
+          />
+        </a>
+      </picture>
       <nav class="header__nav--topNav" id="menuTopNav">
         <a href="./index.html#home">Home</a>
         <a href="./drinks.html" class="active">Bebidas</a>
         <a href="/about.html">Quienes somos</a>
         <a href="/contact.html">Contacto</a>
+        <a href="#" id="openModalLink">Tu pedido</a>
         <a href="javascript:void(0);" class="icon" onclick="openMenuTopNav()">
           <i class="fa fa-bars"></i>
         </a>
@@ -76,19 +82,27 @@
             type="video/mp4"
           />
         </video>
-         <div class="content">
+        <div class="content">
           <h1 class="title">Nuestras Bebidas</h1>
-          <hr>
+          <hr />
           <p>
-            Si algo deja huella en <strong>Drinks Free</strong> es su impresionante variedad de cócteles y bebidas. La carta está pensada para sorprender tanto a amantes de los clásicos como a quienes buscan algo diferente en cada visita.
+            Si algo deja huella en <strong>Drinks Free</strong> es su
+            impresionante variedad de cócteles y bebidas. La carta está pensada
+            para sorprender tanto a amantes de los clásicos como a quienes
+            buscan algo diferente en cada visita.
           </p>
           <p>
-            La variedad de bebidas en <strong>Drinks Free</strong> no es solo extensa, es inteligente, creativa y bien ejecutada. Ideal para descubrir nuevos sabores cada noche y volver por más. Un lugar donde cada cóctel cuenta su propia historia.
+            La variedad de bebidas en <strong>Drinks Free</strong> no es solo
+            extensa, es inteligente, creativa y bien ejecutada. Ideal para
+            descubrir nuevos sabores cada noche y volver por más. Un lugar donde
+            cada cóctel cuenta su propia historia.
           </p>
         </div>
       </section>
       <section class="section__drinks" id="sectionDrinks"></section>
+      <section id="orderModalContainer" class="order"></section>
     </main>
+    <script src="js/order.js"></script>
     <script src="js/index.js"></script>
     <script src="js/drinks.js"></script>
   </body>
