@@ -45,9 +45,8 @@
 }
 
 .flip-card-front img {
-  object-fit: contain;
-    width: 100%;
-
+  object-fit: cover;
+  width: 300px;
 }
 
 
@@ -75,11 +74,27 @@
   gap: 10px;
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 376px) {
 
+  .section__drinks {
+
+  padding: 100px 0px 0px 100px;
+}
+.flip-card-front {
+  width: 100%;
+
+
+}
 .flip-card-back__actions {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.flip-card-front img {
+  width: 275px;
+  height: 100%;
+      object-fit: cover;
+
 }
 }
