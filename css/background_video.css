@@ -23,33 +23,51 @@ h1.title {
   font-size: 2.5rem;
 }
 
-/* Media queries para pantallas de hasta 768px (típicamente tablets y móviles) */
 @media (max-width: 768px) {
   .section__video #backgroundVideo {
-    /* Aquí podrías ajustar el video si fuera necesario, pero para centrar el contenido, no es estrictamente necesario modificar el video en sí, ya que su min-width: 100% lo mantendrá cubriendo la pantalla. */
-    /* Si quisieras centrar el video y que no cubra el 100%, tendrías que ajustar min-width y min-height y usar 'left: 50%; transform: translateX(-50%);' */
-     left: 50%; /* Mueve el bloque de contenido a la mitad de la pantalla */
-    transform: translateX(-50%); /* Ajusta el bloque de contenido para centrarlo horizontalmente */
+     left: 50%; 
+    transform: translateX(-50%); 
   }
 
   .content {
-    left: 50%; /* Mueve el bloque de contenido a la mitad de la pantalla */
-    transform: translateX(-50%); /* Ajusta el bloque de contenido para centrarlo horizontalmente */
-    width: 90%; /* Ajusta el ancho para que no ocupe el 100% y tenga un poco de margen */
-    max-width: 600px; /* Limita el ancho máximo para tabletas */
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 90%; 
+    max-width: 600px; 
     margin: 0 ;
   }
 
   h1.title {
-    font-size: 2rem; /* Reduce el tamaño del título para mejor visualización en móviles */
+    font-size: 2rem; 
   }
 }
 
-/* Media query adicional para pantallas más pequeñas (solo móviles) */
-@media (max-width: 480px) {
+
+@media (max-width: 426px) {
   .content {
-    padding: 15px; /* Reduce el padding en pantallas muy pequeñas */
+    padding: 15px; 
     line-height: 25px;
+        width: 60%; 
+        position: absolute;
+        top: 100px;
+        bottom: auto;
+        left: 60%; 
+                width: 70%; 
+
+
+  }
+
+  h1.title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 321px) {
+  .content {
+        left: 60%; 
+    padding: 15px; 
+    line-height: 25px;
+        width: 80%; 
       
   }
 
